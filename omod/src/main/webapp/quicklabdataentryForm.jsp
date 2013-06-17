@@ -4,12 +4,12 @@
 <openmrs:htmlInclude file="/scripts/calendar/calendar.js" />
 <openmrs:htmlInclude file="/moduleResources/@MODULE_ID@/style/stylesheet.css" />
 
-<h2><spring:message code="quicklabdataentry.title"/></h2>
+<h2><spring:message code="quickdataentry.title"/></h2>
 
 <br/>
 <div class="" id="patientLink" style="display: ${displayDiv};">
 	<a href="../../patientDashboard.form?patientId=${patient_id}">
-	<spring:message code="quicklabdataentry.viewdashboard"/>
+	<spring:message code="quickdataentry.viewdashboard"/>
 		${patient.personName}
 	</a>
 </div>
@@ -21,19 +21,19 @@
 	<c:set value="${param.locationId}" var="location"/>
 
 	<br/>
-	<b class="boxHeader"><spring:message code="quicklabdataentry.boxtitle" /></b>
+	<b class="boxHeader"><spring:message code="quickdataentry.boxtitle" /></b>
 	<div class="box">
 		<table>
 			<tr>
-				<td><spring:message code="quicklabdataentry.patient"/></td>
+				<td><spring:message code="quickdataentry.patient"/></td>
 				<td><openmrs_tag:patientField formFieldName="patientId" initialValue="${patient}"/></td>
 			</tr>
 			<tr>
-				<td><spring:message code="quicklabdataentry.location"/></td>
+				<td><spring:message code="quickdataentry.location"/></td>
 				<td><openmrs_tag:locationField formFieldName="locationId" initialValue="${location}" /></td>
 			</tr>
 			<tr>
-				<td><spring:message code="quicklabdataentry.numbercolumns"/></td>
+				<td><spring:message code="quickdataentry.numbercolumns"/></td>
 				<td>
 					<select name="noRows" id="noRows" onselect="setTableRows()">
 						<c:forEach var="item" items="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"varStatus="status">
@@ -45,7 +45,7 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" name="rowSelect" value="<spring:message code="quicklabdataentry.confirm"/>" /></td>
+				<td><input type="submit" name="rowSelect" value="<spring:message code="quickdataentry.confirm"/>" /></td>
 			</tr>
 		</table>
 	</div>
@@ -62,27 +62,27 @@
 	<input type="hidden" name="patient" value="${param.patientId}"/>
 	<input type="hidden" name="location" value="${param.locationId}"/>
 	<br/>
-	<b class="boxHeader" style="height: auto; display: ${hideDiv};"><spring:message code="quicklabdataentry.tabletitle"/></b>
+	<b class="boxHeader" style="height: auto; display: ${hideDiv};"><spring:message code="quickdataentry.tabletitle"/></b>
 	<div class="box" style="height: auto;">
 		<table width="100%">
 			  <tr>
-				   <td class="dateField"><spring:message code="quicklabdataentry.testdate"/></td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.provider"/></td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.hb"/><br/>(g/dl)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.ht"/><br/>(%)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.gb"/><br/>(x109/l)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.neutro"/><br/>(x109/l)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.lympho"/><br/>(x109/l)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.plt"/><br/>(x109/l)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.sgot"/><br/>(iu/l)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.sgpt"/><br/>(iu/l)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.creat"/><br/>(μmol./l)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.glucose"/><br/>(mg/dl)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.cd4"/><br/>(cells/mm3)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.viralload"/><br/>(copies/ml)</td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.cd4percent"/></td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.hivpcr"/></td>
-				   <td class="tableColumns"><spring:message code="quicklabdataentry.rpr"/></td>
+				   <td class="dateField"><spring:message code="quickdataentry.testdate"/></td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.provider"/></td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.hb"/><br/>(g/dl)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.ht"/><br/>(%)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.gb"/><br/>(x109/l)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.neutro"/><br/>(x109/l)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.lympho"/><br/>(x109/l)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.plt"/><br/>(x109/l)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.sgot"/><br/>(iu/l)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.sgpt"/><br/>(iu/l)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.creat"/><br/>(μmol./l)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.glucose"/><br/>(mg/dl)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.cd4"/><br/>(cells/mm3)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.viralload"/><br/>(copies/ml)</td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.cd4percent"/></td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.hivpcr"/></td>
+				   <td class="tableColumns"><spring:message code="quickdataentry.rpr"/></td>
 				  </tr>
 		<!-- </table>
 	</div>
@@ -127,7 +127,7 @@
 		<hr/>
 		<table>
 			<tr>
-				<td><input type="submit" name="labSave" value="<spring:message code="quicklabdataentry.save"/>" /></td>
+				<td><input type="submit" name="labSave" value="<spring:message code="quickdataentry.save"/>" /></td>
 			</tr>
 		</table>
 	</div>

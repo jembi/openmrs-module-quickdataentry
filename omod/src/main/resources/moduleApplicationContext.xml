@@ -28,15 +28,11 @@
 	<bean id="quickLabDataEntrySubmitController" class="@MODULE_PACKAGE@.web.controller.QuickLabDataEntrySubmitController" />
     
     <bean id="quickLabDataEntryFormController" class="@MODULE_PACKAGE@.web.controller.QuickLabDataEntryFormController">
-		<property name="viewName">
-			<value>/module/quicklabdataentry/quicklabdataentryForm</value>
-		</property>
+		<property name="viewName" value="module/quickdataentry/quicklabdataentryForm" />
     </bean>
 	
     <bean id="quickDrugEntryFormController" class="@MODULE_PACKAGE@.web.controller.QuickDrugEntryFormController">
-		<property name="viewName">
-			<value>/module/quicklabdataentry/quickdrugentryForm</value>
-		</property>
+		<property name="viewName" value="module/quickdataentry/quickdrugentryForm" />
     </bean>
     
     <!-- /Controllers -->

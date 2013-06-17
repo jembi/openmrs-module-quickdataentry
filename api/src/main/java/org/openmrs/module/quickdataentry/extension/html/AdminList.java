@@ -37,7 +37,7 @@ public class AdminList extends AdministrationSectionExt {
 	 * @see org.openmrs.module.web.extension.AdministrationSectionExt#getTitle()
 	 */
 	public String getTitle() {
-		return "quicklabdataentry.title";
+		return "quickdataentry.title";
 	}
 	
 	/**
@@ -47,10 +47,16 @@ public class AdminList extends AdministrationSectionExt {
 		
 		Map<String, String> map = new HashMap<String, String>();
 		
-		map.put("module/quicklabdataentry/quicklabdataentryForm.form", "quicklabdataentry.access");
-		map.put("module/quicklabdataentry/quickdrugentryForm.form", "quicklabdataentry.drugtitle");
+		map.put("/module/quickdataentry/quicklabdataentryForm.form", "quickdataentry.access");
+		//map.put("/module/quickdataentry/quickdrugentryForm.form", "quickdataentry.drugtitle");
 		
 		return map;
 	}
+	
+	
+//	@Override
+//    public String getRequiredPrivilege() {
+//	    return "View Data Entry";
+//    }
 	
 }

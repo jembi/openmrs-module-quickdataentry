@@ -122,7 +122,7 @@ public class QuickDataEntryDashboardController extends PortletController {
 	/**
 	 * The following tests correspond to the Obs of each encounter.
 	 * TESTS: Hb (21), Ht (1015), GB (678), Neutro	(1022), Lympho (1021)
-	 * Plt (729), SGOT (653), SGPT (654), Créat. (790), Glucose	(887)
+	 * Plt (729), SGOT (653), SGPT (654), Creat. (790), Glucose	(887)
 	 * CD4 (5497), HIV VIRAL LOAD (856), CD4% (730), HIV PCR (1553), RPR (1478)
 	 *
 	 * @param patient the patient that encounter the provider (does the test)

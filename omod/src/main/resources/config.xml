@@ -6,7 +6,7 @@
 	<!-- Quick data entry Module Properties -->
 	<id>quickdataentry</id>
 	<name>Quick data entry</name>
-	<version>0.1.2</version>
+	<version>1.9.1</version>
 	<package>org.openmrs.module.@MODULE_ID@</package>
 	<author>Rwanda MoH</author>
 	<description>

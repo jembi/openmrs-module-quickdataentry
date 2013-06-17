@@ -1,9 +1,9 @@
 <%@ include file="/WEB-INF/template/include.jsp"%>
 
 <openmrs:htmlInclude file="/scripts/calendar/calendar.js" />
-<openmrs:htmlInclude file="/moduleResources/@MODULE_ID@/style/stylesheet.css" />
+<openmrs:htmlInclude file="/moduleResources/quickdataentry/style/stylesheet.css" />
 
-<form action="module/@MODULE_ID@/quicklabdataentrySubmit.form" method="get" id="form_select">
+<form action="module/quickdataentry/quicklabdataentrySubmit.form" method="get" id="form_select">
 	
 	<c:set value="${param.noRows}" var="numRows"/>
 	<c:set value="${param.patientId}" var="patient"/>
@@ -39,7 +39,7 @@
 	
 </form>
 
-<form action="module/@MODULE_ID@/quicklabdataentrySubmit.form" method="get" id="form_encounter">
+<form action="module/quickdataentry/quicklabdataentrySubmit.form" method="get" id="form_encounter">
 
 	<c:set value="${num_rows}" var="numRows"/>
 	<c:set value="${patient_id}" var="patient"/>
