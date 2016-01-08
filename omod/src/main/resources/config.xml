@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE module PUBLIC "-//OpenMRS//DTD OpenMRS Config 1.2//EN" "http://resources.openmrs.org/doctype/config-1.2.dtd">
-
 <module configVersion="1.2">
 	
 	<!-- Quick data entry Module Properties -->
-	<id>quickdataentry</id>
-	<name>Quick data entry</name>
-	<version>1.9.1</version>
-	<package>org.openmrs.module.@MODULE_ID@</package>
+	<id>${project.parent.artifactId}</id>
+	<name>${project.parent.name}</name>
+	<version>${project.parent.version}</version>
+	<package>${project.parent.groupId}.${project.parent.artifactId}</package>
 	<author>Rwanda MoH</author>
 	<description>
 			Quick Lab data entry. A module that helps in capturing past Lab tests records
@@ -18,33 +16,33 @@
 		<require_module version="0.1.1">org.openmrs.module.mohtracportal</require_module>
 	</require_modules>
 	
-	<activator>@MODULE_PACKAGE@.QuickLabDataEntryActivator</activator>
+	<activator>${project.parent.groupId}.${project.parent.artifactId}.QuickLabDataEntryActivator</activator>
 	
-	<!-- <updateURL>https://dev.openmrs.org/modules/download/@MODULE_ID@/update.rdf</updateURL> -->
+	<!-- <updateURL>https://dev.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf</updateURL> -->
 	<!-- /Base Module Properties -->
 	
-	<require_version>1.6.2.12911</require_version>
+	<require_version>1.9.9</require_version>
 	
 	<!-- Extensions -->
 	<!-- <extension>
 		<point>org.openmrs.admin.list</point>
-		<class>@MODULE_PACKAGE@.extension.html.AdminList</class>
+		<class>${project.parent.groupId}.${project.parent.artifactId}.extension.html.AdminList</class>
 	</extension> -->
 	
 	<extension>
 		<point>org.openmrs.tracmodule.list</point>
-		<class>@MODULE_PACKAGE@.extension.html.AdminList</class>
+		<class>${project.parent.groupId}.${project.parent.artifactId}.extension.html.AdminList</class>
 	</extension>
 	
 	<!--<extension>
 		<point>org.openmrs.patientDashboardTab</point>
-		<class>@MODULE_PACKAGE@.extension.html.QuickDataEntryDashboardTab</class>
+		<class>${project.parent.groupId}.${project.parent.artifactId}.extension.html.QuickDataEntryDashboardTab</class>
 	</extension> -->
 	
 	<!-- AOP
 	<advice>
 		<point>org.openmrs.api.FormService</point>
-		<class>@MODULE_PACKAGE@.advice.DuplicateFormAdvisor</class>
+		<class>${project.parent.groupId}.${project.parent.artifactId}.advice.DuplicateFormAdvisor</class>
 	</advice>
 	 /AOP -->
 	
@@ -64,7 +62,7 @@
 
 	<!-- Required Global Properties 
 	<globalProperty>
-		<property>@MODULE_ID@.someProperty</property>
+		<property>${project.parent.artifactId}.someProperty</property>
 		<defaultValue></defaultValue>
 		<description>
 			A description of the global property goes here.  The description
@@ -78,14 +76,14 @@
 	<dwr>
 		<allow>
 			<create creator="new" javascript="DWRFormEntryService">
-				<param name="class" value="org.openmrs.module.@MODULE_ID@.web.DWRFormEntryService"/>
+				<param name="class" value="org.openmrs.module.${project.parent.artifactId}.web.DWRFormEntryService"/>
 				<include method="enterForm"/>
 			</create>
 		</allow>
 
 		<signatures>
 			<![CDATA[
-			import @MODULE_PACKAGE@.web.DWRFormEntryService;
+			import ${project.parent.groupId}.${project.parent.artifactId}.web.DWRFormEntryService;
 			DWRFormEntryService.enterForm(Integer patientId, Integer formId, boolean useEncounter, List<String> fields);
 			]]>
 		</signatures>	
@@ -96,14 +94,14 @@
 	<!-- Accessed through the url /pageContext()/moduleServlet/<moduleId>/<servlet-name> 
 	<servlet>
 		<servlet-name>formDownload</servlet-name>
-		<servlet-class>@MODULE_PACKAGE@.web.FormDownloadServlet</servlet-class>
+		<servlet-class>${project.parent.groupId}.${project.parent.artifactId}.web.FormDownloadServlet</servlet-class>
 	</servlet>
 	-->
 	<!-- /Servlets -->
 	
 	
 	<!-- Internationalization -->
-	<!-- All message codes should start with @MODULE_ID@.* -->
+	<!-- All message codes should start with ${project.parent.artifactId}.* -->
 	<messages>
 		<lang>en</lang>
 		<file>messages.properties</file>
